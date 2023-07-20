@@ -33,17 +33,20 @@ def hyper_dark_mode():
     windows_handles = find_windows_by_title(all_windows, ".*Virtual Machine.*")
     print(windows_handles)
 
+    bg_processes = []
+
     for window_handle in windows_handles:
         child_wins = get_current_child_windows(window_handle["id"])
-        child_wins = [win for win in child_wins if
-                      win['rectangle'][2] - win['rectangle'][0] != 0 and win['rectangle'][3] - win['rectangle'][1] != 0]
+        child_wins = [
+            win for win in child_wins
+            if win['rectangle'][2] - win['rectangle'][0] != 0 and win['rectangle'][3] - win['rectangle'][1] != 0
+               and win["class_name"] == "WindowsForms10.Window.8.app.0.aa0c13_r6_ad1"
+        ]
 
         child_wins.sort(key=lambda win: win['rectangle'][1],reverse=True)
         print(child_wins)
 
-        hyper_v_child_windows_count = sum(
-            1 for child_win in child_wins if child_win["class_name"] == "WindowsForms10.Window.8.app.0.aa0c13_r6_ad1"
-        )
+        hyper_v_child_windows_count = len(child_wins)
 
         if hyper_v_child_windows_count == 4:
             _hide(child_wins[0]["id"])
@@ -55,8 +58,12 @@ def hyper_dark_mode():
 
         _dwmwa_dark_mode(window_handle["id"])
         bg_process = multiprocessing.Process(target=bg_black_window.main, args=(window_handle["id"],))
+        bg_processes.append(bg_process)
         bg_process.start()
+
+    for bg_process in bg_processes:
         bg_process.join()
+
 
 
 
