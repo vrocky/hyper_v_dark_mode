@@ -28,10 +28,6 @@ HyperV Dark Mode is a simple Python script that allows you to enable dark mode f
 
 Contributions are welcome! If you have any suggestions or improvements, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ---
 
 **Disclaimer:** This is very rough script, we can use it has hobby testing and workaround. Happy coding !! 
