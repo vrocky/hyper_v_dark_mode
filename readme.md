@@ -1,7 +1,7 @@
 # HyperV Dark Mode
 
 
-HyperV Dark Mode is a simple Python script that allows you to enable dark mode for the Virtual Machine Connection window in Hyper-V. This can help reduce eye strain, especially for developers who spend long hours working on virtual machines in a bright environment.
+HyperV Dark Mode is a simple Python script that allows you to enable dark mode for the Virtual Machine Connection window in Hyper-V. This can help reduce eye strain, especially for developers who spend long hours working on virtual machines and annoyed by the white strip left with hyper v console as hyper v doesnt go fully dark.
 
 ## Features
 
