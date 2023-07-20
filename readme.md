@@ -34,8 +34,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Disclaimer:** This project is provided as-is with no warranty or guarantee of any kind. Please use it responsibly and at your own risk. The developers are not responsible for any damages or issues caused by the use of this script.
-
-For any questions or support, please contact the project maintainers.
+**Disclaimer:** This is very rough script, we can use it has hobby testing and workaround. Happy coding !! 
 
 
