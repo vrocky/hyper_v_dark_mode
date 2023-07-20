@@ -8,13 +8,10 @@ def enum_windows_callback(hwnd, windows):
     window_info['class_name'] = win32gui.GetClassName(hwnd)
     _, pid = win32process.GetWindowThreadProcessId(hwnd)
     window_info['process_id'] = pid
+    window_info['rectangle'] = win32gui.GetWindowRect(hwnd)
     windows.append(window_info)
 
 def enum_windows():
     windows = []
     win32gui.EnumWindows(enum_windows_callback, windows)
     return windows
-
-
-
-
