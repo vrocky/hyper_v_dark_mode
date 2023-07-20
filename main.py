@@ -47,7 +47,7 @@ def hyper_dark_mode():
 
         if hyper_v_child_windows_count == 4:
             _hide(child_wins[0]["id"])
-            _hide(child_wins[1]["id"])
+            _hide(child_wins[2]["id"])
             _hide(child_wins[3]["id"])
         elif hyper_v_child_windows_count == 3:
             _hide(child_wins[0]["id"])
